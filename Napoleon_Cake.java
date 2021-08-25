@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;  
 import java.util.List;
 import java.util.ArrayList;
- 
+//https://codeforces.com/problemset/problem/1501/B
 
 public class Napoleon_Cake{
 	public static void main(String[] args){
