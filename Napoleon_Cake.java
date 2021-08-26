@@ -10,12 +10,17 @@ public class Napoleon_Cake{
 		Scanner scanner = new Scanner(System.in);
 		int tests = scanner.nextInt();
 		int[] stack;
+		int[] input;
 		int size = 0;
-		int input = 0;
 		for(int i=0; i<tests; i++){
 			size = scanner.nextInt();
 			stack = new int[size];
+			input = new int[size];
+			StringBuilder sb = new StringBuilder();
+			int j = 0;
+			/*
 			for(int j=0; j<size; j++){
+				StringBuilder sb = new StringBuilder();
 				input = scanner.nextInt();
 				if(input == 0){
 					stack[j] = 0;
@@ -28,9 +33,23 @@ public class Napoleon_Cake{
 						}
 					}
 				}
+			}*/
+			for(int y=0; y<size; y++) input[y] = scanner.nextInt();
+			for(j=size-1; j>=0; j--){
+				if(input[j] == 0 && stack[j] != 1){
+					stack[j] = 0;
+				}else if(input[j] == 1){
+					stack[j] = 1;
+				}else{
+					for(int x=0; x<input[j]; x++){
+						if(j-x >= 0){
+							stack[j-x] = 1;
+						}
+					}
+				}
+				sb.append(stack[j] + " ");
 			}
-			for(int j=0; j<stack.length; j++) System.out.print(stack[j] + " ");
-			System.out.println();
+			System.out.println(sb.reverse().toString().trim());
 		}
 	}
 	
