@@ -11,7 +11,7 @@ public class Muster{
 		int tests = scanner.nextInt();
 		
 		for(int i=0; i<tests; i++){
-		
+			
 		}
 	}
 	
@@ -24,5 +24,22 @@ public class Muster{
 		for(int i=0; i<arrInput.length; i++){
 			arrInput[i] = list.get(i);
 		}
+	}
+	
+	static int lcm(int a, int b){
+		boolean stop = false;
+		int counter = 2;
+		while(!stop){
+			if(counter % a == 0 && counter % b == 0){
+				stop = true;
+			}else{
+				counter++;
+			}
+		}
+		return counter;
+	}
+	
+	static int gcd(int a, int b){
+		return (a*b)/lcm(a,b);
 	}
 }
