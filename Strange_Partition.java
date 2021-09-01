@@ -5,13 +5,19 @@ import java.util.List;
 import java.util.ArrayList;
  
 
-public class Muster{
+public class Strange_Partition{
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
 		int tests = scanner.nextInt();
-		
+		int n=0,x=0;	
+		int[] arr;
 		for(int i=0; i<tests; i++){
-			
+			n = scanner.nextInt();
+			x = scanner.nextInt();	
+			arr = new int[n];
+			for(int j=0; j<n; j++){
+				
+			}
 		}
 	}
 	
