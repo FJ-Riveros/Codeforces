@@ -3,15 +3,23 @@ import java.util.Arrays;
 import java.util.Collections;  
 import java.util.List;
 import java.util.ArrayList;
+
  
 
 public class Exciting_Bets{
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
 		int tests = scanner.nextInt();
-		
+		long a=0, b=0, c=0;
 		for(int i=0; i<tests; i++){
-			
+			a = scanner.nextLong();
+			b = scanner.nextLong();
+			if(a == b){
+				System.out.println("0 0");
+			}else{
+				c= Math.abs(a-b);
+				System.out.println(c + " " + Math.min(a%c, c - (a%c)));
+			}
 		}
 	}
 	
