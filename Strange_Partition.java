@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;  
 import java.util.List;
 import java.util.ArrayList;
- 
+ //https://codeforces.com/problemset/problem/1471/A
 
 public class Strange_Partition{
 	public static void main(String[] args){
