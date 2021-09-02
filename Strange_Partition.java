@@ -9,15 +9,38 @@ public class Strange_Partition{
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
 		int tests = scanner.nextInt();
-		int n=0,x=0;	
+		int n=0,x=0,e=0,m=0,max=0,p=0;	
 		int[] arr;
 		for(int i=0; i<tests; i++){
 			n = scanner.nextInt();
 			x = scanner.nextInt();	
 			arr = new int[n];
 			for(int j=0; j<n; j++){
-				
+				arr[j] = scanner.nextInt();
+				/*e = scanner.nextInt();
+				if(e % x == 0){
+					min += e/x;
+				}else{
+					
+				}*/
 			}
+			
+			for(int j=0; j<arr.length; j++){
+				//min
+				if(arr[j] % x == 0){
+					m += e/x;
+				}else{
+					if(arr[j] + arr[j+1] % x == 0){
+						m += (arr[j] + arr[j+1])/x;
+						j += 1;
+					}else{
+						m += (arr[j]/x)+1;
+					}
+				}
+				
+				//max
+			}
+			System.out.println(m);
 		}
 	}
 	
