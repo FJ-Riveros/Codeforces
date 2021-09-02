@@ -30,12 +30,14 @@ public class Strange_Partition{
 				if(arr[j] % x == 0){
 					m += e/x;
 				}else{
-					if(arr[j] + arr[j+1] % x == 0){
-						m += (arr[j] + arr[j+1])/x;
-						j += 1;
+					if(j+1 < arr.length){
+						if(arr[j] + arr[j+1] % x == 0){
+							m += (arr[j] + arr[j+1])/x;
+							j += 1;
+						}
 					}else{
 						m += (arr[j]/x)+1;
-					}
+					}		
 				}
 				
 				//max
